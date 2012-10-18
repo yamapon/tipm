@@ -81,8 +81,8 @@ program.prompt({
   utils.log('create', dir);
   mkdir(dir);
 
-  conf.scripts = ["index.js"];
-  write(join(dir, 'index.js'), '');
+  conf.scripts = [main+".js"];
+  write(join(dir, main+'.js'), '');
 
   // makefile
   //write(join(dir, 'Makefile'), createMakefile(obj));
@@ -118,7 +118,7 @@ function createMakefile(obj) {
 
   // build target
   buf += 'build: module';
-  buf += ' index.js';
+  buf += name+'.js';
   buf += '\n\t@module build --dev\n\n';
 
   // template.js target
