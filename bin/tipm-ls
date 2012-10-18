@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var program = require('commander')
+  , component = require('..')
+  , log = component.utils.log
+  , path = require('path')
+  , fs = require('fs');
+
+// parse argv
+
+program.parse(process.argv);
+
+// list
+
+console.log();
+fs.readdirSync('modules/commonjs').forEach(function(pkg){
+  var mod = path.resolve('modules/commonjs', pkg);
+  fs.readdirSync(mod).forEach(function(pkver){
+    log(pkg, pkver);
+  });
+});
+console.log();
