@@ -67,7 +67,7 @@ program.prompt({
   conf.author = obj.author||'';
   conf.license = obj.license||'MIT';
   conf.description = obj.desc||'';
-  conf.main = 'index';
+  conf.main = name;
   conf.keywords = [];
   conf.dependencies = {};
   conf.development = {};
