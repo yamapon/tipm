@@ -51,14 +51,15 @@ program.prompt({
   version : 'version (0.0.1): ',
   author  : 'author name: ',
   license : 'license type (MIT): ',
-  minsdk  : 'minimum Ti SDK version (2.0.0): '
+  minsdk  : 'minimum Ti SDK version (2.0.0): ',
+  guid    : 'Ti guid (xxxxxxx-xxxxxx-xxxxxx): '
 }, function(obj){
   // repo
   var repo = obj.repo.split('/');
   if (2 != repo.length) throw new Error('repo must be <username>/<project>');
 
   // name
-  var name = obj.repo.replace(/\//g,'-');
+  var name = repo[1];
 
   // populate json
   conf.name = name;
@@ -71,8 +72,8 @@ program.prompt({
   conf.keywords = [];
   conf.dependencies = {};
   conf.development = {};
-  conf.guid = obj.desc||'xxxxxxxxxx-xxxxxxxxx-xxxxxxxx';
-  conf.minsdk = obj.minsdk||'2.1.0';
+  conf.guid = obj.guid||'xxxxxxx-xxxxxx-xxxxxx';
+  conf.minsdk = obj.minsdk||'2.0.0';
   //Create version dir
   dir += '/'+conf.version;
 
