@@ -1,0 +1,47 @@
+{
+  "name": "tipm",
+  "version": "0.1.0",
+  "description": "Titanium package manager consuming git repositories",
+  "keywords": [
+    "titanium",
+    "tipm",
+    "package",
+    "client",
+    "browser",
+    "module"
+  ],
+  "author": "Christian Sullivan <cs@euforic.co>",
+  "dependencies": {
+    "term-css": "1.0.0",
+    "commander": "1.0.5",
+    "mkdirp": "0.3.4",
+    "superagent": "0.9.3",
+    "component-builder": "0.0.7",
+    "string-to-js": "0.0.1",
+    "jog": "0.4.0",
+    "batch": "0.2.0",
+    "win-spawn": "0.0.0",
+    "debug": "*"
+  },
+  "devDependencies": {
+    "minstache": "0.0.1",
+    "mocha": "*",
+    "should": "*"
+  },
+  "bin": {
+    "tipm": "bin/tipm",
+    "tipm-info": "bin/tipm-info",
+    "tipm-help": "bin/tipm-help",
+    "tipm-install": "bin/tipm-install",
+    "tipm-ls": "bin/tipm-ls",
+    "tipm-convert": "bin/tipm-convert",
+    "tipm-build": "bin/tipm-build",
+    "tipm-search": "bin/tipm-search",
+    "tipm-create": "bin/tipm-create",
+    "tipm-open": "bin/tipm-open",
+    "tipm-changes": "bin/tipm-changes",
+    "tipm-wiki": "bin/tipm-wiki",
+    "tipm-docs": "bin/tipm-docs"
+  },
+  "main": "index"
+}
