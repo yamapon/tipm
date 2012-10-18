@@ -14,7 +14,7 @@
   apps `module/commonjs/` directory by default. View `tipm help install` for details.
 
 ```
-$ tipm install tipm/tip
+$ tipm install tipm/monglo
 
    install : tipm/monglo@master
        dep : tipm/events@master
@@ -138,12 +138,12 @@ minimum Ti SDK version: 2.1.0
 
   Because `tipm(1)` has no notion of a "template", even simple view files
   should be converted to a `require()`-able module. It is recommended that public
-  modules shared within the community use regular x-view templates, and regular
-  x-stylesheets to maximize contributions, however if you wish to use alternate
+  modules shared within the community use regular ax-view templates, and regular
+  ax-stylesheets to maximize contributions, however if you wish to use alternate
   technologies just make sure to compile them before publishing them to Github.
 
-  For the recommended use-case of regular x-view, the `tipm-convert(1)` command
-  will translate a regular x-view file to its `require()`-able JavaScript counterpart.
+  For the recommended use-case of regular ax-view, the `tipm-convert(1)` command
+  will translate a regular ax-view file to its `require()`-able JavaScript counterpart.
 
 ## Developing tipm(1) sub-commands
 
@@ -168,6 +168,11 @@ Then run:
 ```
 $ make test
 ```
+
+# TODO
+  - Compile native modules
+  - Integrate view templates (ax-view)
+  - Integrate stylesheet templates (ax-style)
 
 ## Shout-outs
 
