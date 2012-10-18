@@ -48,10 +48,10 @@ function write(path, str) {
 program.prompt({
   repo    : 'repo (username/project): ',
   desc    : 'description: ',
-  version : 'version:(0.0.1) ',
+  version : 'version (0.0.1): ',
   author  : 'author name: ',
-  licence : 'license type:(MIT) ',
-  minsdk  : 'minimum Ti SDK version: '
+  license : 'license type (MIT): ',
+  minsdk  : 'minimum Ti SDK version (2.0.0): '
 }, function(obj){
   // repo
   var repo = obj.repo.split('/');
