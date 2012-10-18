@@ -89,7 +89,7 @@ program.prompt({
   //write(join(dir, 'Makefile'), createMakefile(obj));
 
   // readme
-  write(join(dir, 'Readme.md'), readme(obj));
+  write(join(dir, 'Readme.md'), readme(conf));
 
   // .gitignore
   write(join(dir, '.gitignore'), 'manifest\nbuild\nmodules\n');
