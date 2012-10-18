@@ -1,6 +1,6 @@
 {
   "name": "tipm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Titanium package manager consuming git repositories",
   "keywords": [
     "titanium",
@@ -34,8 +34,6 @@
     "tipm-help": "bin/tipm-help",
     "tipm-install": "bin/tipm-install",
     "tipm-ls": "bin/tipm-ls",
-    "tipm-convert": "bin/tipm-convert",
-    "tipm-build": "bin/tipm-build",
     "tipm-search": "bin/tipm-search",
     "tipm-create": "bin/tipm-create",
     "tipm-open": "bin/tipm-open",
