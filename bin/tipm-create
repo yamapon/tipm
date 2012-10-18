@@ -81,8 +81,8 @@ program.prompt({
   utils.log('create', dir);
   mkdir(dir);
 
-  conf.scripts = [main+".js"];
-  write(join(dir, main+'.js'), '');
+  conf.scripts = [name+".js"];
+  write(join(dir, name+'.js'), '');
 
   // makefile
   //write(join(dir, 'Makefile'), createMakefile(obj));
