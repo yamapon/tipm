@@ -16,5 +16,5 @@ module.exports = function anonymous(obj) {
     return '';
   };
 
-  return "\n# " + escape(obj.name) + "\n\n  " + escape(obj.desc) + "\n\n## Installation\n\n    $ tipm install " + escape(obj.repo) + "\n\n## API\n\n   \n\n## License\n\n  MIT\n"
+  return "\n# " + escape(obj.name) + "\n\n  " + escape(obj.description) + "\n\n## Installation\n\n    $ tipm install " + escape(obj.repo) + "\n\n## API\n\n   \n\n## License\n\n  MIT\n"
 }
