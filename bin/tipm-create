@@ -74,16 +74,23 @@ program.prompt({
   conf.development = {};
   conf.guid = obj.guid||'xxxxxxx-xxxxxx-xxxxxx';
   conf.minsdk = obj.minsdk||'2.0.0';
+
+  var id = conf.repo.replace(/\//g, '-');
+
+  // temp  fix
+  dir = id;
+
   //Create version dir
   dir += '/'+conf.version;
+
 
   // dir
   console.log();
   utils.log('create', dir);
   mkdir(dir);
 
-  conf.scripts = [name+".js"];
-  write(join(dir, name+'.js'), '');
+  conf.scripts = [id+".js"];
+  write(join(dir, id+'.js'), '');
 
   // makefile
   //write(join(dir, 'Makefile'), createMakefile(obj));
