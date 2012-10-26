@@ -52,7 +52,8 @@ program.prompt({
   author  : 'author name: ',
   license : 'license type (MIT): ',
   minsdk  : 'minimum Ti SDK version (2.0.0): ',
-  guid    : 'Ti guid (xxxxxxx-xxxxxx-xxxxxx): '
+  guid    : 'Ti guid (xxxxxxx-xxxxxx-xxxxxx): ',
+  vfoler  : 'Create version sub directory (no): '
 }, function(obj){
   // repo
   var repo = obj.repo.split('/');
@@ -74,15 +75,17 @@ program.prompt({
   conf.development = {};
   conf.guid = obj.guid||'xxxxxxx-xxxxxx-xxxxxx';
   conf.minsdk = obj.minsdk||'2.0.0';
+  conf.vfolder = (obj.vfolder === 'yes');
 
   var id = conf.repo.replace(/\//g, '-');
 
   // temp  fix
   dir = id;
 
-  //Create version dir
-  dir += '/'+conf.version;
-
+  if(conf.vfolder){
+    //Create version dir
+    dir += '/'+conf.version;
+  }
 
   // dir
   console.log();
