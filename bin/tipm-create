@@ -75,14 +75,13 @@ program.prompt({
   conf.development = {};
   conf.guid = obj.guid||'xxxxxxx-xxxxxx-xxxxxx';
   conf.minsdk = obj.minsdk||'2.0.0';
-  conf.vfolder = (obj.vfolder === 'yes');
 
   var id = conf.repo.replace(/\//g, '-');
 
   // temp  fix
   dir = id;
 
-  if(conf.vfolder){
+  if(obj.vfolder === 'yes'){
     //Create version dir
     dir += '/'+conf.version;
   }
